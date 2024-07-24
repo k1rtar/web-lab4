@@ -1,4 +1,4 @@
-# Лабораторная работа #4
+![image](https://github.com/user-attachments/assets/86f5f144-d7df-45ea-a9dc-9986b978b057)# Лабораторная работа #4
 
 Переписать приложение из предыдущей лабораторной работы с использованием следующих технологий:
 
@@ -27,4 +27,5 @@
 - Все результаты проверки должны сохраняться в базе данных под управлением СУБД PostgreSQL.
 - Для доступа к БД необходимо использовать Spring Data.
 
-![image](https://github.com/user-attachments/assets/2d95b617-588a-4197-b257-e62a33b308eb)
+![image](https://github.com/user-attachments/assets/4d199d44-d0e6-47c7-a220-de552a11b1c1)
+
