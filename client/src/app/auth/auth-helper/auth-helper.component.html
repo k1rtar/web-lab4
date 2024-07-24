@@ -1,0 +1,55 @@
+
+
+<table class="main">
+    <table class="main">
+        <tr>
+            <td class="header-container">
+                <table class="header">
+                    <tr>
+                        <td><span>Таранов Кирилл Викторович, группа P3219, вариант 23427</span></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td class="auth-container">
+                <div *ngIf="showLogin; else registerTemplate">
+                    <span class="auth-span">Вход</span>
+                    <form (ngSubmit)="onLogin()" [formGroup]="loginForm" class="auth-form">
+                        <div class="form-group">
+                            <input type="text" id="username" class="text-input" formControlName="username" required placeholder="Имя пользователя">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="password" class="text-input" formControlName="password" required placeholder="Пароль">
+                        </div>
+                        <button type="submit" class="auth-button">Войти</button>
+                    </form>
+                </div>
+
+                <ng-template #registerTemplate>
+                    <span class="auth-span">Регистрация</span>
+                    <form (ngSubmit)="onRegister()" [formGroup]="registerForm" class="auth-form">
+                        <div class="form-group">
+                            <input type="text" id="username" class="text-input" formControlName="username" required placeholder="Имя пользователя">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="password" class="text-input" formControlName="password" required placeholder="Пароль">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" id="confirmPassword" class="text-input" formControlName="confirmPassword" required placeholder="Подтвердить пароль">
+                        </div>
+                        <button type="submit" class="auth-button">Зарегистрироваться</button>
+                    </form>
+                </ng-template>
+
+
+                <div class="switcher">
+                    <button (click)="showLogin = !showLogin" class="auth-button">{{ showLogin ? 'Регистрация' : 'Вход' }}</button>
+                </div>
+                <br>
+                <div *ngIf="errorMessage" class="error-message">
+                    {{ errorMessage }}
+                </div>
+            </td>
+        </tr>
+</table>
